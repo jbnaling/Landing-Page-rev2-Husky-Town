@@ -1,0 +1,256 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*
+begin my edits
+*/ 
+
+:root {
+    --darkBlue: #1F2937;
+    --HeroMainText: #F9FAF8;
+    --HeroSecondaryText: #E5E7EB;
+    --lightBlue: #3882F6;
+    --bodyPaddingLeftRight: 50px;
+    --bodyPaddingTopBottom: 10px;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header,
+footer {
+    height: 50px;
+    background-color: var(--darkBlue);
+    color: var(--HeroSecondaryText);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--bodyPaddingTopBottom);
+    padding-bottom: var(--bodyPaddingTopBottom);
+    padding-left: var(--bodyPaddingLeftRight);
+    padding-right: var(--bodyPaddingLeftRight);
+}
+
+header img {
+    height: 40px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header a {
+    color: var(--HeroSecondaryText);
+    text-decoration: none;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.section { 
+    padding-left: var(--bodyPaddingLeftRight);
+    padding-right: var(--bodyPaddingLeftRight);
+    min-height: 300px;
+    height: 300px;
+    max-height: 300px;
+}
+
+.section__one {
+    background-color: var(--darkBlue);
+    color: var(--HeroSecondaryText);
+    display: flex;
+    flex: 1;
+}
+
+/* stops divs from growing due to content?
+.section div {
+    flex: 1 0 0;
+} */
+
+.section__one .container {
+    display: flex;
+    padding: 50px 0px 0px 0px;
+    width: 100%;
+}
+
+.section__one h1 {
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--HeroMainText);
+}
+
+.section__one p {
+    font-size: 18px;
+    color: var(--HeroSecondaryText)
+}
+
+.section__left,
+.section__right {
+    height: 100%;
+    width: 50%;
+}
+
+.section__one button {
+    background-color: var(--lightBlue);
+    color: white;
+    font-weight: bold;
+    padding: 5px 20px 5px 20px;
+    border: solid var(--lightBlue);
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.section__two {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section__two h1 {
+    font-size: 36px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.imageGallery {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+}
+
+.imageGallery__item img {
+    height: 150px;
+    width: 150px;
+    border: 5px var(--lightBlue) solid;
+    display: flex;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.section__three{    
+    background-color: #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section__three .container {
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+blockquote{
+font-size: 36px;
+font-weight: light;
+font-style: italic;
+}
+
+cite {
+    display: flex;
+    justify-content: right;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.section__four{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: var(--bodyPaddingLeftRight);
+    margin-right: var(--bodyPaddingLeftRight);
+
+}
+
+.section__four .container {   
+    min-width: 100%;  
+    min-height: 75px;
+    max-height: 75px;
+    border-radius: 5px;
+    padding: 30px;
+    background-color: var(--lightBlue);
+    display: flex;
+    justify-content: center; 
+    gap: 200px;
+    align-items: center;
+}
+
+.section__four .text h1{
+    color: white;
+    font-weight: bold;
+}
+
+.section__four .text p{
+    color: var(--HeroSecondaryText);
+}
+
+.section__four button{
+    background-color: #3882F6;
+    color: white;
+    border: 1px white solid;
+    border-radius: 5px;
+    height: 20px;
+    width: 100px;
+}
